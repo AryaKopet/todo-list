@@ -10,7 +10,7 @@
 </head>
 <body>
     <div x-data="taskApp()" x-init="init()" class="container mt-5">
-        <h1 class="text-center mb-4">Apa kegiatan kita hari ini?</h1>
+        <h1 class="text-center mb-4">Tulis kegiatanmu Disini</h1>
         <!-- Task Form -->
         <form @submit.prevent="addTask" class="task-form mb-4">
             <div class="input-group mb-2">
@@ -56,15 +56,15 @@
                 <h2 x-show="!isEditMode" class="mb-3">View Task</h2>
                 
                 <div>
-                    <label for="taskTitle">Task Title</label>
+                    <label for="taskTitle">Nama Kegiatan</label>
                     <input x-model="selectedTask.title" id="taskTitle" class="form-control" placeholder="Enter task title" :disabled="!isEditMode" />
-                </div>
+                </div> <br>
                 <div>
-                    <label for="taskDescription">Task Description</label>
+                    <label for="taskDescription">Deskripsi</label>
                     <textarea x-model="selectedTask.description" id="taskDescription" class="form-control" placeholder="Enter task description" :disabled="!isEditMode"></textarea>
                 </div>
-                <p>
-                    <strong>Current Priority:</strong>
+                <p> <br>
+                    <strong>Tingkat Kesulitan:</strong>
                     <span x-text="selectedTask.priority"></span>
                 </p>
                 <div x-show="isEditMode">
