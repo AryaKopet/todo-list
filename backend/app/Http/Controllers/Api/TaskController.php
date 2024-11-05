@@ -39,7 +39,7 @@ class TaskController extends Controller
 
         // Jika Task tidak ditemukan, kirim respons error
         if (!$task) {
-            return response()->json(['message' => 'Task not found'], 404);
+            return response()->json(['message' => 'Data tidak ditemukan'], 404);
         }
 
         // Validasi data
